@@ -1,0 +1,14 @@
+type: hyperskill
+title: HyperNetwork
+language: English
+summary: "<p>Set up a virtual network with Docker. Create and manage volumes, run\
+  \ multiple services, and enable container communication for practical applications.</p>"
+programming_language: Python
+programming_language_version: 3.10
+environment: unittest
+content:
+  - HyperNetwork
+additional_files:
+  - name: requirements.txt
+mode: Study
+yaml_version: 5

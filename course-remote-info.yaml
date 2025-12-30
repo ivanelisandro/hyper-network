@@ -1,0 +1,97 @@
+hyperskill_project:
+  id: 373
+  ide_files: https://hyperskill.org/api/projects/373/additional-files/additional_files.json
+  is_template_based: false
+  use_ide: true
+  environment: unittest
+update_date: "Tue, 30 Dec 2025 20:27:39 UTC"
+stages:
+  - id: 2215
+    step: 31523
+    is_completed: true
+  - id: 2216
+    step: 50536
+    is_completed: false
+  - id: 2217
+    step: 50537
+    is_completed: false
+  - id: 2218
+    step: 50538
+    is_completed: false
+  - id: 2219
+    step: 50539
+    is_completed: false
+  - id: 2220
+    step: 50573
+    is_completed: false
+topics:
+  0:
+    - title: Operating systems
+      theory_id: 9704
+    - title: Units of information
+      theory_id: 6865
+    - title: World Wide Web
+      theory_id: 6633
+    - title: "Introduction to Docker, installation"
+      theory_id: 15850
+    - title: Run the "hello-world" docker container
+      theory_id: 16020
+    - title: Basic operations with a container
+      theory_id: 17573
+    - title: IP
+      theory_id: 13662
+    - title: Docker networking
+      theory_id: 23960
+    - title: Docker volumes
+      theory_id: 31735
+    - title: Introduction to Linux
+      theory_id: 9526
+    - title: Files
+      theory_id: 13025
+    - title: JSON
+      theory_id: 6854
+    - title: File types
+      theory_id: 13017
+    - title: Containers
+      theory_id: 15082
+    - title: File modes and permissions
+      theory_id: 13953
+  1:
+    - title: Command line overview
+      theory_id: 8977
+    - title: Parameters and options
+      theory_id: 9746
+    - title: First program in bash
+      theory_id: 12135
+    - title: Variables and aliases
+      theory_id: 16670
+    - title: Docker build and docker tag
+      theory_id: 23950
+    - title: Working with environment variables
+      theory_id: 21828
+    - title: Pushing images to DockerHub
+      theory_id: 27375
+    - title: Libraries
+      theory_id: 8504
+    - title: Documentation
+      theory_id: 12069
+    - title: Semantic versioning
+      theory_id: 19244
+    - title: Authentication and authorization
+      theory_id: 14219
+    - title: Environment variables
+      theory_id: 21817
+  3:
+    - title: What are databases
+      theory_id: 8497
+    - title: "SQL: structured query language"
+      theory_id: 7054
+    - title: Basic data types in SQL
+      theory_id: 7123
+  4:
+    - title: Computer memory
+      theory_id: 18003
+    - title: Components of computer memory
+      theory_id: 18049
+    - title: Memory management
+      theory_id: 18243
