@@ -12,6 +12,15 @@ files:
     learner_created: false
   - name: tests.py
     learner_created: false
+  - name: stage2.md
+    visible: true
+    learner_created: true
+  - name: docker-compose.yml
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/373/stages/2216/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 30 Dec 2025 20:56:45 UTC"
 record: -1

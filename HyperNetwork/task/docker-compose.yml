@@ -1,0 +1,29 @@
+version: "3.1"
+services:
+  hyper-postgres:
+    image: postgres:15.3
+    environment:
+      - POSTGRES_DB=hyper-db
+      - POSTGRES_USER_FILE=/run/secrets/db_user
+      - POSTGRES_PASSWORD_FILE=/run/secrets/db_pass
+    secrets:
+      - db_user
+      - db_pass
+    ports:
+      - "5432:5432"
+    networks:
+      - hyper-network
+    volumes:
+      - hyper-volume:/var/lib/postgresql/data
+
+networks:
+  hyper-network:
+
+volumes:
+  hyper-volume:
+
+secrets:
+  db_user:
+    file: ./secrets/db_user
+  db_pass:
+    file: ./secrets/db_pass
