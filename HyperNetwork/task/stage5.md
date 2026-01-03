@@ -1,6 +1,6 @@
 # Stage 5:
 
-In this stage, we will clean up our system.
+In this stage, we will clean up the containers from our system.
 
 ## Objectives
 
