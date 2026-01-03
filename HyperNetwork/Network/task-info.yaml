@@ -12,12 +12,9 @@ files:
   - name: tests.py
     visible: true
     learner_created: false
-  - name: stage1.md
-    visible: true
-    learner_created: true
 feedback_link: https://hyperskill.org/projects/373/stages/2215/implement#comment
 status: Solved
 feedback:
   message: Congratulations!
-  time: "Tue, 30 Dec 2025 20:20:49 UTC"
-record: 1
+  time: "Wed, 31 Dec 2025 18:04:22 UTC"
+record: 4

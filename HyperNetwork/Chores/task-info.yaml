@@ -12,6 +12,9 @@ files:
   - name: tests.py
     visible: true
     learner_created: false
+  - name: stage1.md
+    visible: true
+    learner_created: false
 feedback_link: https://hyperskill.org/projects/373/stages/2219/implement#comment
 status: Unchecked
 record: -1

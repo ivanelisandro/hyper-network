@@ -3,7 +3,7 @@ from hstest import StageTest, dynamic_test, CheckResult
 
 test_network = "hyper-network"
 test_volume = "hyper-volume"
-project_images = ["postgres:15.3"]
+project_images = ["postgres:15.3", "adminer:4.8.1"]
 
 test_mongo_envs = [
     'POSTGRES_PASSWORD=hyper2023',
@@ -125,6 +125,58 @@ class DockerTest(StageTest):
 
         if not is_volume_found:
             return CheckResult.wrong(f"The container volume is wrong for {container_name}!")
+
+        return CheckResult.correct()
+
+    @dynamic_test()
+    def test5(self):
+        """Tests image of container, state,exposed port, and host port"""
+        all_containers = self.client.containers.list(all=True)
+        container_name = "hyper-adminer"
+        image_name = "adminer:4.8.1"
+        exposed_port = "8080/tcp"
+        host_port = "8080"
+        status = "running"
+        selected_container = None
+
+        for container in all_containers:
+            # Finds the container object to test
+            if container_name in container.name:
+                selected_container = container
+
+        if not selected_container:
+            # Fails if the expected container is not found
+            return CheckResult.wrong(f"Couldn't find a container with the name '{container_name}'!")
+
+        if image_name not in selected_container.attrs.get("Config").get("Image"):
+            return CheckResult.wrong(f"Couldn't find a container from the '{image_name}' image!")
+
+        if status not in selected_container.status:
+            # Fails if the container is not running
+            return CheckResult.wrong(f"The container should be {status}!")
+
+        host_ports = selected_container.ports.get(exposed_port)
+
+        if not host_ports:
+            # Fails if the exposed port is wrong and returns None
+            return CheckResult.wrong(
+                f"The exposed port should be {exposed_port} and need to be mapped to a host port!")
+
+        host_ports_str = "_".join(item.get("HostPort", "_") for item in host_ports)
+
+        if host_port not in host_ports_str:
+            # Fails if the host port is wrong
+            return CheckResult.wrong(f"You should map {exposed_port} to {host_port}!")
+
+        if not selected_container.attrs.get("NetworkSettings") or \
+                not selected_container.attrs.get("NetworkSettings").get("Networks"):
+            # Tests if container network mode exists
+            return CheckResult.wrong("Could not read networks from container!")
+
+        container_networks = "*".join(selected_container.attrs.get("NetworkSettings").get("Networks").keys())
+        if test_network not in container_networks:
+            # Tests if container network is correct
+            return CheckResult.wrong(f"The container network is wrong for {container_name}!")
 
         return CheckResult.correct()
 
