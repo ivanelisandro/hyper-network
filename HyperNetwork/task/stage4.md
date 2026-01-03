@@ -1,6 +1,6 @@
 # Stage 4:
 
-In this stage, we will `adminer` to create records.
+In this stage, we will use `adminer` to create records.
 
 ## Objectives
 
