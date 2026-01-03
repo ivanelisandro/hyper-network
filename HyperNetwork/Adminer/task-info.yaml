@@ -3,6 +3,9 @@ files:
   - name: main.py
     visible: true
     learner_created: false
+  - name: stage1.md
+    visible: true
+    learner_created: false
   - name: test/__init__.py
     visible: true
     learner_created: false
@@ -12,6 +15,18 @@ files:
   - name: tests.py
     visible: true
     learner_created: false
+  - name: stage3.md
+    visible: true
+    learner_created: true
+  - name: stage2.md
+    visible: true
+    learner_created: true
+  - name: docker-compose.yml
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/373/stages/2217/implement#comment
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sat, 03 Jan 2026 00:25:27 UTC"
+record: 2
