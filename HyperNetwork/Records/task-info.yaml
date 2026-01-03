@@ -27,6 +27,9 @@ files:
   - name: stage4.md
     visible: true
     learner_created: true
+  - name: stage5.md
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/373/stages/2218/implement#comment
 status: Solved
 feedback:
